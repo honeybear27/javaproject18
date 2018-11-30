@@ -1,0 +1,59 @@
+countYZ<SEP>fez day
+countYZ<SEP>fez day
+    countYZ<SEP>day fyyyz
+countYZ<SEP>aaz yyz my
+
+withoutString    <SEP>Hello there<SEP>  x
+withoutString    <SEP>AA22bb<SEP> 2
+withoutString    <SEP>abxxxab <SEP>xx
+withoutString    <SEP>1111 <SEP>11
+withoutString    <SEP>Hello there   <SEP>llo
+
+equalIsNot    <SEP>   isisnotno7Not
+    equalIsNot<SEP>   mis3notpotbotis
+   equalIsNot  <SEP>  noisxxnotyynotxsi
+equalIsNot<SEP>This is notnot
+  equalIsNot<SEP>  xxxyyyzzzintint
+
+startWord<SEP> hippo<SEP>  xip
+startWord<SEP>  kit  <SEP>  cit
+startWord<SEP>hip<SEP>   zip
+   startWord   <SEP>hippo  <SEP>  xippo
+startWord  <SEP>hippo   <SEP>   hi
+
+   nTwice<SEP>     <SEP> 3
+   nTwice<SEP>   Chocolate  <SEP> 3
+nTwice   <SEP>  Code<SEP>  2
+nTwice  <SEP>  Chocolate  <SEP>1
+   nTwice<SEP>  Hello  <SEP>2
+nTwice  <SEP>Chocolate  <SEP>  0
+
+twoChar   <SEP>java<SEP>2
+   twoChar<SEP>Hello<SEP>99
+twoChar<SEP>  Hello<SEP>-7
+twoChar<SEP>yay    <SEP>0
+twoChar<SEP>java<SEP>  0
+
+comboString  <SEP>Hello  <SEP>hi
+comboString<SEP>aaa<SEP>
+comboString  <SEP>xyz   <SEP>ab
+comboString<SEP>aaa<SEP>   bb
+comboString<SEP>bb<SEP>a
+
+theEnd<SEP>Hello    <SEP>true
+theEnd<SEP>  x<SEP>   true
+theEnd  <SEP>chocolate<SEP>false
+    theEnd<SEP>1234<SEP>true
+theEnd<SEP>    code<SEP>   false
+
+withoutX   <SEP>xHix
+withoutX<SEP>Hix
+withoutX<SEP>   xaxbx
+withoutX  <SEP>  
+withoutX  <SEP>  Hexllo
+
+endsLy   <SEP>    oddly
+   endsLy<SEP>ly
+endsLy<SEP>falsey
+endsLy   <SEP>  evenly
+    endsLy<SEP>y
