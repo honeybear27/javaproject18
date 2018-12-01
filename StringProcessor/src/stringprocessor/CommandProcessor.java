@@ -1,16 +1,30 @@
 package stringprocessor;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
 
+/**
+ * The Class CommandProcessor.
+ */
 public class CommandProcessor {
+	
+	/** The filename. */
 	private String filename;
 
+	/**
+	 * Instantiates a new command processor.
+	 *
+	 * @param filename the filename
+	 */
 	public CommandProcessor(String filename) {
 		this.filename = filename;
 	}
 
+	/**
+	 * Run.
+	 *
+	 * @throws FileNotFoundException the file not found exception
+	 */
 	public void run() throws FileNotFoundException {
 		File file = new File(filename);
 		Scanner scan = new Scanner(file);

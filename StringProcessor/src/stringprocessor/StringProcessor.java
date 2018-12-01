@@ -1,11 +1,19 @@
 package stringprocessor;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
 
+/**
+ * The Class StringProcessor.
+ */
 public class StringProcessor {
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 * @throws FileNotFoundException the file not found exception
+	 */
 	public static void main(String[] args) throws FileNotFoundException {
 		
 		Scanner scan = new Scanner(System.in);

@@ -1,7 +1,16 @@
 package stringprocessor;
 
+/**
+ * The Class StringMethod.
+ */
 public class StringMethod {
 	
+	/**
+	 * Count YZ.
+	 *
+	 * @param str the str
+	 * @return the int
+	 */
 	public static int countYZ(String str) {
 		  int count = 0;
 		  
@@ -17,6 +26,13 @@ public class StringMethod {
 		  return count;
 	}
 	
+	/**
+	 * Without string.
+	 *
+	 * @param base the base
+	 * @param remove the remove
+	 * @return the string
+	 */
 	public static String withoutString(String base, String remove) {
 		  String s = "";
 		  String b = base.toLowerCase();
@@ -34,6 +50,12 @@ public class StringMethod {
 		  return s;
 	}
 	
+	/**
+	 * Equal is not.
+	 *
+	 * @param str the str
+	 * @return true, if successful
+	 */
 	public static boolean equalIsNot(String str) {
 		  int is = 0;
 		  int not = 0;
@@ -51,6 +73,13 @@ public class StringMethod {
 		  return is == not;
 	}
 	
+	/**
+	 * Start word.
+	 *
+	 * @param str the str
+	 * @param word the word
+	 * @return the string
+	 */
 	public static String startWord(String str, String word) {
 		  if (str.length() > 0 && str.length() > word.length()) {
 		    if (str.substring(1, word.length()).equals(word.substring(1))) {
@@ -65,6 +94,13 @@ public class StringMethod {
 		  return "";
 	}
 	
+	/**
+	 * N twice.
+	 *
+	 * @param str the str
+	 * @param n the n
+	 * @return the string
+	 */
 	public static String nTwice(String str, int n) {
 		if(str.length() == 0) {
 			return "";
@@ -72,6 +108,13 @@ public class StringMethod {
 		  return str.substring(0, n) + str.substring(str.length() - n); 
 	}
 
+	/**
+	 * Two char.
+	 *
+	 * @param str the str
+	 * @param index the index
+	 * @return the string
+	 */
 	public static String twoChar(String str, int index) {
 		  if (index < str.length() - 1 && index >= 0) {
 		    return str.substring(index, index + 2);
@@ -80,6 +123,13 @@ public class StringMethod {
 		  }
 	}
 	
+	/**
+	 * Combo string.
+	 *
+	 * @param a the a
+	 * @param b the b
+	 * @return the string
+	 */
 	public static String comboString(String a, String b) {
 		  if (a.length() > b.length()) {
 		    return b + a + b;
@@ -88,6 +138,13 @@ public class StringMethod {
 		  }
 	}
 	
+	/**
+	 * The end.
+	 *
+	 * @param str the str
+	 * @param front the front
+	 * @return the string
+	 */
 	public static String theEnd(String str, boolean front) {
 		  if (front) {
 		    return str.substring(0, 1);
@@ -96,6 +153,12 @@ public class StringMethod {
 		  }
 	}
 	
+	/**
+	 * Without X.
+	 *
+	 * @param str the str
+	 * @return the string
+	 */
 	public static String withoutX(String str) {
 		  if (str.length() > 1) {
 		    if (str.substring(0, 1).equals("x")) {
@@ -115,6 +178,12 @@ public class StringMethod {
 		  return str;
 	}
 	
+	/**
+	 * Ends ly.
+	 *
+	 * @param str the str
+	 * @return true, if successful
+	 */
 	public static boolean endsLy(String str) {
 		  if (str.length() > 1) {
 		    if (str.indexOf("ly") == str.length() - 2){
