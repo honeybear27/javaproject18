@@ -5,12 +5,24 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class RocketTest.
+ */
 public class RocketTest {
 
+	/**
+	 * Sets the up.
+	 *
+	 * @throws Exception the exception
+	 */
 	@Before
 	public void setUp() throws Exception {
 	}
 
+	/**
+	 * Test.
+	 */
 	@Test
 	public void test() {
 		Rocket a1 = new Rocket("abc", "delta", 1996, 10000, "moon", 5);

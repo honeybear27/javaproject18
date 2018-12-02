@@ -5,12 +5,24 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Ad_BalloonTest.
+ */
 public class Ad_BalloonTest {
 
+	/**
+	 * Sets the up.
+	 *
+	 * @throws Exception the exception
+	 */
 	@Before
 	public void setUp() throws Exception {
 	}
 
+	/**
+	 * Test.
+	 */
 	@Test
 	public void test() {
 		Ad_Balloon a1 = new Ad_Balloon("abc", "delta", 1996, 10000, "Microsoft", 50, 15);

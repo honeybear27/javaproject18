@@ -78,6 +78,9 @@ public class AirObjectTest {
 
 	}
 	
+	/**
+	 * Test compareto.
+	 */
 	@Test
 	public void testCompareto() {
 		AirObject a1 = new Drone("dragon_drone", "delta", 1996, 10000, 5, 200);

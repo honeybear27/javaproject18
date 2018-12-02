@@ -5,12 +5,24 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class AirObjectNodeTest.
+ */
 public class AirObjectNodeTest {
 
+	/**
+	 * Sets the up.
+	 *
+	 * @throws Exception the exception
+	 */
 	@Before
 	public void setUp() throws Exception {
 	}
 
+	/**
+	 * Test.
+	 */
 	@Test
 	public void test() {
 		AirObjectNode head = new AirObjectNode(null, null, null);

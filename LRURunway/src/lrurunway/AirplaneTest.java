@@ -5,12 +5,24 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class AirplaneTest.
+ */
 public class AirplaneTest {
 
+	/**
+	 * Sets the up.
+	 *
+	 * @throws Exception the exception
+	 */
 	@Before
 	public void setUp() throws Exception {
 	}
 
+	/**
+	 * Test.
+	 */
 	@Test
 	public void test() {
 		Airplane a1 = new Airplane("abc", "delta", 1996, 10000, "South Korea", 50, "James");
