@@ -58,6 +58,136 @@ public class AirObjectListTest {
 	}
 	
 	@Test
+	public void testDelete() {
+		AirObjectList list = new AirObjectList();
+		Drone flyer = new Drone("flyer1", "Samsung", 2015, 30, 4, 100);
+		Airplane boeing = new Airplane("boeing777", "United States", 2001, 10000, "India", 70, "Patrick");
+		Rocket spaceship = new Rocket("Apollo", "United States", 1950, 30000, "Moon", 3);
+		
+		list.insert(flyer, 0);
+		list.insert(boeing, 1);
+		list.insert(spaceship, 2);
+		
+		list.delete(null);
+		assertEquals("Print AirObjectList : \n" + 
+				"1: Drone : [flyer1] [Samsung] [2015] [30] [4] [100]\n" + 
+				"2: Airplane : [boeing777] [United States] [2001] [10000] [India] [70] [Patrick]\n" + 
+				"3: Rocket : [Apollo] [United States] [1950] [30000] [Moon] [3]\n", 
+				list.toString());
+		
+		list.delete(boeing);
+		assertEquals("Print AirObjectList : \n" + 
+				"1: Drone : [flyer1] [Samsung] [2015] [30] [4] [100]\n" + 
+				"2: Rocket : [Apollo] [United States] [1950] [30000] [Moon] [3]\n", 
+				list.toString());
+		
+		list.insert(boeing, 1);
+		assertEquals("Print AirObjectList : \n" + 
+				"1: Drone : [flyer1] [Samsung] [2015] [30] [4] [100]\n" + 
+				"2: Airplane : [boeing777] [United States] [2001] [10000] [India] [70] [Patrick]\n" + 
+				"3: Rocket : [Apollo] [United States] [1950] [30000] [Moon] [3]\n", 
+				list.toString());
+		
+		list.delete(flyer);
+		assertEquals("Print AirObjectList : \n" + 
+				"1: Airplane : [boeing777] [United States] [2001] [10000] [India] [70] [Patrick]\n" + 
+				"2: Rocket : [Apollo] [United States] [1950] [30000] [Moon] [3]\n", 
+				list.toString());
+		
+		list.insert(flyer, 0);
+		assertEquals("Print AirObjectList : \n" + 
+				"1: Drone : [flyer1] [Samsung] [2015] [30] [4] [100]\n" + 
+				"2: Airplane : [boeing777] [United States] [2001] [10000] [India] [70] [Patrick]\n" + 
+				"3: Rocket : [Apollo] [United States] [1950] [30000] [Moon] [3]\n", 
+				list.toString());
+		
+		list.delete(spaceship);
+		assertEquals("Print AirObjectList : \n" + 
+				"1: Drone : [flyer1] [Samsung] [2015] [30] [4] [100]\n" + 
+				"2: Airplane : [boeing777] [United States] [2001] [10000] [India] [70] [Patrick]\n", 
+				list.toString());
+		
+		list.delete(spaceship);
+		assertEquals("Print AirObjectList : \n" + 
+				"1: Drone : [flyer1] [Samsung] [2015] [30] [4] [100]\n" + 
+				"2: Airplane : [boeing777] [United States] [2001] [10000] [India] [70] [Patrick]\n", 
+				list.toString());
+		
+		
+	}
+
+	@Test
+	public void testIsDeleted() {
+		AirObjectList list = new AirObjectList();
+		Drone flyer = new Drone("flyer1", "Samsung", 2015, 30, 4, 100);
+		Airplane boeing = new Airplane("boeing777", "United States", 2001, 10000, "India", 70, "Patrick");
+		Rocket spaceship = new Rocket("Apollo", "United States", 1950, 30000, "Moon", 3);
+		
+		list.insert(flyer, 0);
+		list.insert(boeing, 1);
+		list.insert(spaceship, 2);
+		
+		list.isDeleted(null);
+		assertEquals("Print AirObjectList : \n" + 
+				"1: Drone : [flyer1] [Samsung] [2015] [30] [4] [100]\n" + 
+				"2: Airplane : [boeing777] [United States] [2001] [10000] [India] [70] [Patrick]\n" + 
+				"3: Rocket : [Apollo] [United States] [1950] [30000] [Moon] [3]\n", 
+				list.toString());
+		
+		list.isDeleted(flyer);
+		assertEquals(true, list.isDeleted(flyer));
+		
+		
+	}
+
+	@Test
+	public void testDeleteAt() {
+		
+	}
+
+	@Test
+	public void testIsDeleteAt() {
+		
+	}
+
+	@Test
+	public void testDeleteFront() {
+		
+	}
+	
+	@Test
+	public void testDeleteBack() {
+		
+	}
+
+	@Test
+	public void testMoveToFront() {
+		
+	}
+
+	@Test
+	public void testClear() {
+		AirObjectList list = new AirObjectList();
+		Drone flyer = new Drone("flyer1", "Samsung", 2015, 30, 4, 100);
+		Airplane boeing = new Airplane("boeing777", "United States", 2001, 10000, "India", 70, "Patrick");
+		Rocket spaceship = new Rocket("Apollo", "United States", 1950, 30000, "Moon", 3);
+		
+		list.insert(flyer, 0);
+		list.insert(boeing, 1);
+		list.insert(spaceship, 2);
+		
+		assertEquals("Print AirObjectList : \n" + 
+				"1: Drone : [flyer1] [Samsung] [2015] [30] [4] [100]\n" + 
+				"2: Airplane : [boeing777] [United States] [2001] [10000] [India] [70] [Patrick]\n" + 
+				"3: Rocket : [Apollo] [United States] [1950] [30000] [Moon] [3]\n", list.toString());
+		
+		list.clear();
+		assertEquals("Print AirObjectList : \n", list.toString());
+				
+	}
+	
+	
+	@Test
 	public void testToString() {
 		AirObjectList list = new AirObjectList();
 		Drone flyer = new Drone("flyer1", "Samsung", 2015, 30, 4, 100);
