@@ -122,16 +122,16 @@ public class AirObjectList {
 		
 		if (curr.getNext() == tail) {
 			return null;
-		} else {
-			curr.getNext().getNext().setPrev(curr);
-			curr.setNext(curr.getNext().getNext());
-			size--;			
 		}
-		
-		return curr;
+		AirObjectNode deleted = curr.getNext();
+		curr.getNext().getNext().setPrev(curr);
+		curr.setNext(curr.getNext().getNext());
+		size--;			
+			
+		return deleted;
 	}
 	
-	public boolean isDeleted(AirObject todelete) {
+	public boolean deleteAndCheck (AirObject todelete) {
 		if (todelete == null) {
 			return false;
 		}
@@ -148,16 +148,16 @@ public class AirObjectList {
 		
 		if (curr.getNext() == tail) {
 			return false;
-		} else {
-			curr.getNext().getNext().setPrev(curr);
-			curr.setNext(curr.getNext().getNext());
-			size--;
-			return true;
 		}
+		curr.getNext().getNext().setPrev(curr);
+		curr.setNext(curr.getNext().getNext());
+		size--;
+		return true;
+		
 	}
 	
 	public AirObjectNode deleteAt(int position) {
-		if (position > size) {
+		if (position >= size) {
 			return null;
 		}
 		
@@ -167,15 +167,20 @@ public class AirObjectList {
 			curr = curr.getNext();
 		}
 		
+		if (curr.getNext() == tail) {
+			return null;
+		}
+		
+		AirObjectNode deleted = curr.getNext();
 		curr.getNext().getNext().setPrev(curr);
 		curr.setNext(curr.getNext().getNext());
 		size--;
 		
-		return curr;
+		return deleted;
 	}
 	
-	public boolean isDeletedAt(int position) {
-		if (position > size) {
+	public boolean deletedAndCheckAt(int position) {
+		if (position >= size) {
 			return false;
 		}
 		
@@ -197,11 +202,12 @@ public class AirObjectList {
 			return null;
 		}
 		
+		AirObjectNode deleteFront = head.getNext();
 		head.getNext().getNext().setPrev(head);
 		head.setNext(head.getNext().getNext());
 		size--;
 		
-		return head;
+		return deleteFront;
 	}
 	
 	public AirObjectNode deleteBack() {
@@ -209,11 +215,12 @@ public class AirObjectList {
 			return null;
 		}
 		
+		AirObjectNode deleteBack = tail.getPrev();
 		tail.getPrev().getPrev().setNext(tail);
 		tail.setPrev(tail.getPrev().getPrev());
 		size--;
 		
-		return head;
+		return deleteBack;
 	}
 	
 	public AirObjectNode moveToFront(AirObject newAirObject) {
@@ -243,6 +250,38 @@ public class AirObjectList {
 		head.setNext(temp);
 		
 		return temp;
+	}
+	
+	public AirObjectNode moveToFront(int position) {
+		if (position >= size) {
+			return null;
+		}
+		
+		AirObjectNode curr = head;
+		
+		for (int i = 0; i < size; i++) {
+			curr = curr.getNext();
+		}
+		
+		return insertFront(delete(curr.getValue()).getValue());
+	}
+	
+	public boolean search(AirObject newAirObject) {
+		if (newAirObject == null) {
+			return false;
+		}
+		
+		AirObjectNode search = new AirObjectNode(null, null, newAirObject);
+		AirObjectNode curr = head.getNext();
+		
+		for (int i = 0; i < size; i++) {
+			if (curr.getValue().equals(search.getValue())) {
+				return true;
+			}
+			curr = curr.getNext();
+		}
+		
+		return false;
 	}
 	
 	public void clear() {
